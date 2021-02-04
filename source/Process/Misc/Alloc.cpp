@@ -46,7 +46,7 @@ InvokeDealloc(
 {
     FBlock& block = cargs->dst;
     auto w = block.Width();
-    auto h = block.Width();
+    auto h = block.Height();
     auto fmt = block.Format();
     auto cs = block.ColorSpace();
     cargs->dst.LoadFromData( nullptr, w, h, fmt, nullptr, FOnInvalidBlock(), FOnCleanupData( &OnCleanup_FreeMemory ) );
